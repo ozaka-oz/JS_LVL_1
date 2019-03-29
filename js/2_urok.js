@@ -51,7 +51,7 @@ n3.onclick = function () {
         }
     } else if (a < 0 && b < 0) {
         var numb = a * b;
-    } else if (a < 0 && b > 0 || a > 0 && b < 0) {
+    } else if (a * b < 0) {
         var numb = a + b;
     } else {
         console.log('Вы введил не верные данные. Обновите страницу и повоторите опирацию!')
@@ -118,34 +118,81 @@ n4.onclick = function () {
 }
 
 n5.onclick = function () {
-//    var a = Math.round(Number(prompt('Введите первое число:')));
-//    var operation = Math.round(Number(prompt('Введите число от 1 до 4 (где 1 - "+", 2 - "-", 3 - "/", 4 - "*":')));
-//    var b = Math.round(Number(prompt('Введите второе число:')));
-    var a = 1;
-    var b = 3;
+    //    var a = Math.round(Number(prompt('Введите первое число:')));
+    //    var operation = Math.round(Number(prompt('Введите число от 1 до 4 (где 1 - "+", 2 - "-", 3 - "/", 4 - "*":')));
+    //    var b = Math.round(Number(prompt('Введите второе число:')));
+    console.log('Задание №5');
 
-
-    function addition(arg1, arg2) {
-        arg1 = a;
-        arg2 = b;
-        var c = arg1 + arg2;
-        console.log(c);
-        return (c);
+    function sum(a, b) {
+        return a + b;
     }
 
-    function subtraction(a, b) {
-        var c = a - b;
-        return c;
+    function sub(a, b) {
+        return a - b;
     }
 
-    function division(a, b) {
-        var c = a / b;
-        return c;
+    function div(a, b) {
+        return a / b;
     }
 
-    function multiplication(a, b) {
-        var c = a * b;
-        return c;
+    function mul(a, b) {
+        return a * b;
     }
-    addition();
 }
+
+n6.onclick = function () {
+     console.log('Задание №6');
+    function sum(a, b) {
+        return a + b;
+    }
+
+    function sub(a, b) {
+        return a - b;
+    }
+
+    function div(a, b) {
+        return a / b;
+    }
+
+    function mul(a, b) {
+        return a * b;
+    }
+
+    function mathOperation(arg1, arg2, operation) {
+        switch (operation) {
+            case "sum":
+                return sum(arg1, arg2);
+                break;
+            case "sub":
+                return sub(arg1, arg2);
+                break;
+            case "div":
+                return div(arg1, arg2);
+                break;
+            case "mul":
+                return mul(arg1, arg2);
+                break;
+            default:
+                console.log("Такой операции нет!")
+        }
+    }
+    console.log(mathOperation(10, 5, "sum"));
+    console.log(mathOperation(10, 5, "sub"));
+    console.log(mathOperation(10, 5, "div"));
+    console.log(mathOperation(10, 5, "mul"));
+}
+
+n7.onclick = function () {
+    console.log('Задание №7');
+    console.log (xxx);
+    console.log(null==0);
+    console.log(null!=0);
+    console.log(null===0);
+    console.log(null!==0);
+    console.log(null>0);
+    console.log(null>=0);
+    console.log(null<0);
+    console.log(null<=0);
+    console.log('Не смог понять! Все про это прочитал, но пока сложно.')
+}
+
