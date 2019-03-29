@@ -123,10 +123,13 @@ n5.onclick = function () {
 //    var b = Math.round(Number(prompt('Введите второе число:')));
     var a = 1;
     var b = 3;
-    var c;
 
-    function addition(a, b) {
-        var c = a + b;
+
+    function addition(arg1, arg2) {
+        arg1 = a;
+        arg2 = b;
+        var c = arg1 + arg2;
+        console.log(c);
         return (c);
     }
 
@@ -144,6 +147,5 @@ n5.onclick = function () {
         var c = a * b;
         return c;
     }
-
-    addition(c);
+    addition();
 }
