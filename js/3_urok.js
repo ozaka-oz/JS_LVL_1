@@ -29,5 +29,11 @@ butdz3n4.onclick = function () {
 
 // задание №5
 butdz3n5.onclick = function () {
-
+    for (let i = 1; i < 20; i++) {
+        var simb = "";
+        for (let k = 1; k < i; k++) {
+            simb += "x";
+        }
+        console.log(simb);
+    }
 }
