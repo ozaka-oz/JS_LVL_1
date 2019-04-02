@@ -8,10 +8,15 @@
 </head>
 
 <body>
-
+<br>
     <div class="container">
         <div class="row">
             <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="pill" role="tab" aria-controls="pills-contact" aria-selected="false">
+                        <h5>JavaScript. LVL 1</h5>
+                    </a>
+                </li>
                 <li class="nav-item">
                     <a class="nav-link" data-toggle="pill" href="#dz1" role="tab" aria-controls="pills-contact" aria-selected="false">ДЗ Урок №1</a>
                 </li>
@@ -173,37 +178,93 @@
                                         <div class="row">
                                             <div class="tab-content" id="pills-tabContent">
                                                 <div class="tab-pane fade show active" id="dz3z1" role="tabpanel" aria-labelledby="pills-home-tab">
-                                                   <input id="butdz3n1" type="button" value="Выполнить" />
+                                                    <input id="butdz3n1" type="button" value="Выполнить" />
                                                     <br><br>
                                                     С помощью цикла while вывести все простые числа в промежутке от 0 до 100
+                                                    <br>
+                                                    <hr>
+                                                    <code>
+                                                        var n = 1;<br>
+                                                        while (n < 100) {<br>
+                                                            &nbsp;&nbsp;n++;<br>
+                                                            &nbsp;&nbsp;var x = 1;<br>
+                                                            &nbsp;&nbsp;while (x < n) {<br>
+                                                                &nbsp;&nbsp;&nbsp;&nbsp;x++;<br>
+                                                                &nbsp;&nbsp;&nbsp;&nbsp;if (n % x == 0) break;<br>
+                                                                &nbsp;&nbsp;}<br>
+                                                                &nbsp;&nbsp;if (x == n) console.log(n);<br>
+                                                                }
+                                                    </code>
                                                 </div>
                                                 <div class="tab-pane fade" id="dz3z2" role="tabpanel" aria-labelledby="pills-profile-tab">
-                                                   <input id="butdz3n2" type="button" value="Выполнить" />
+                                                    <input id="butdz3n2" type="button" value="Выполнить" />
                                                     <br><br>
                                                     С этого урока начинаем работать с функционалом интернет-магазина. Предположим, есть сущность корзины. Нужно реализовать функционал подсчета стоимости корзины в зависимости от находящихся в ней товаров.
+                                                    <br>
+                                                    <hr>
+                                                    <code>
+                                                        var arrPrices = [1200, 550, 3000, 1800];<br>
+                                                        function basketSum (goods) {<br>
+                                                        &nbsp;&nbsp;var sum = 0;<br>
+                                                        &nbsp;&nbsp;for (var i = 0; i < arrPrices.length; i++) {<br>
+                                                            &nbsp;&nbsp;&nbsp;&nbsp;sum += goods[i]<br>
+                                                            &nbsp;&nbsp;}<br>
+                                                            &nbsp;&nbsp;console.log("Общая стоимость: " + sum);<br>
+                                                            }<br>
+                                                            basketSum(arrPrices);
+                                                    </code>
                                                 </div>
                                                 <div class="tab-pane fade" id="dz3z3" role="tabpanel" aria-labelledby="pills-contact-tab">
-                                                   <input id="butdz3n3" type="button" value="Выполнить" />
+                                                    <input id="butdz3n3" type="button" value="Выполнить" />
                                                     <br><br>
                                                     Товары в корзине хранятся в массиве. Задачи:<br>
                                                     a) Организовать такой массив для хранения товаров в корзине;<br>
                                                     b) Организовать функцию countBasketPrice, которая будет считать стоимость корзины.
+                                                    <br>
+                                                    <hr>
+                                                    <code>
+                                                        let arrGoods = ["Щит Капитана Америки", "Перчатка Таноса", "Вибраниум 1 кг", "Мьольнир"];<br>
+                                                        let arrPrices = [3200, 5550, 3000, 1800];<br>
+                                                            &nbsp;&nbsp;function countBasketPrice (goods) {<br>
+                                                            &nbsp;&nbsp;for (i = 0; i < arrGoods.length; i++){<br>
+                                                                &nbsp;&nbsp;&nbsp;&nbsp;console.log (arrGoods[i] + " - " + arrPrices[i])<br>
+                                                            &nbsp;&nbsp;}<br>
+                                                            &nbsp;&nbsp;let sum = 0;<br>
+                                                            &nbsp;&nbsp;for (let i = 0; i < arrPrices.length; i++) {<br>
+                                                                &nbsp;&nbsp;&nbsp;&nbsp;sum += goods[i]<br>
+                                                            &nbsp;&nbsp;}<br>
+                                                            &nbsp;&nbsp;console.log("Общая стоимость: " + sum);<br>
+                                                        }<br>
+                                                        countBasketPrice(arrPrices);
+                                                    </code>
                                                 </div>
                                                 <div class="tab-pane fade" id="dz3z4" role="tabpanel" aria-labelledby="pills-contact-tab">
                                                     <input id="butdz3n4" type="button" value="Выполнить" />
                                                     <br><br>
                                                     *Вывести с помощью цикла for числа от 0 до 9, не используя тело цикла. Выглядеть это должно так:<br>
                                                     for(…){// здесь пусто}
-                                                </div>
-                                                <div class="tab-pane fade" id="dz3z5" role="tabpanel" aria-labelledby="pills-contact-tab">
-                                                    <input id="butdz3n5" type="button" value="Выполнить" />
-                                                    <br><br>
-                                                    *Нарисовать пирамиду с помощью console.log, как показано на рисунке, только у вашей пирамиды должно быть 20 рядов, а не 5:<br>
-                                                    x<br>
-                                                    xx<br>
-                                                    xxx<br>
-                                                    xxxx<br>
-                                                    xxxxx
+                                                    <br>
+                                                    <hr>
+                                                    <code>for (var i = 0; i < 10; console.log(i++)) {}</code> </div> <div class="tab-pane fade" id="dz3z5" role="tabpanel" aria-labelledby="pills-contact-tab">
+                                                            <input id="butdz3n5" type="button" value="Выполнить" />
+                                                            <br><br>
+                                                            *Нарисовать пирамиду с помощью console.log, как показано на рисунке, только у вашей пирамиды должно быть 20 рядов, а не 5:<br>
+                                                            x<br>
+                                                            xx<br>
+                                                            xxx<br>
+                                                            xxxx<br>
+                                                            xxxxx
+                                                            <br>
+                                                            <hr>
+                                                            <code>
+                                                                for (let i = 1; i < 20; i++) {<br>
+                                                                    &nbsp;&nbsp;var simb = "";<br>
+                                                                    &nbsp;&nbsp;for (let k = 1; k < i; k++) {<br>
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;simb += "x";<br>
+                                                                        &nbsp;&nbsp;}<br>
+                                                                        &nbsp;&nbsp;console.log(simb);<br>
+                                                                        }
+                                                            </code>
                                                 </div>
                                             </div>
                                         </div>
