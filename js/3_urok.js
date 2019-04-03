@@ -1,4 +1,3 @@
-
 // задание №1
 butdz3n1.onclick = function () {
     var n = 1;
