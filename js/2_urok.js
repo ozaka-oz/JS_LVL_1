@@ -141,6 +141,8 @@ n5.onclick = function () {
 }
 
 n6.onclick = function () {
+    var x = 5;
+    var y = 4;
      console.log('Задание №6');
     function sum(a, b) {
         return a + b;
@@ -176,7 +178,7 @@ n6.onclick = function () {
                 console.log("Такой операции нет!")
         }
     }
-    console.log(mathOperation(10, 5, "sum"));
+    console.log(mathOperation(x, y, "sum"));
     console.log(mathOperation(10, 5, "sub"));
     console.log(mathOperation(10, 5, "div"));
     console.log(mathOperation(10, 5, "mul"));
