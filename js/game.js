@@ -25,5 +25,3 @@ let game = {
         return false;
     }
 };
-
-console.log("Наберите в консоли game.run(), чтобы начать игру.");

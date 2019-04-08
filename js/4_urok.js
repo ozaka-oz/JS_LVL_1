@@ -20,6 +20,8 @@ butdz4n1.onclick = function () {
 
 // задание №3
 butdz4n3.onclick = function () {
-
-
+    confirm("Хотите сыграть в игру: Кто хочет стать миллионером?");
+    if (confirm) {
+                game.run();
+            }
 }
