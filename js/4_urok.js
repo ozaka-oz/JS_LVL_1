@@ -16,3 +16,10 @@ butdz4n1.onclick = function () {
     }
     convertToObject(num);
 }
+
+
+// задание №3
+butdz4n3.onclick = function () {
+
+
+}
