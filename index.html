@@ -29,6 +29,9 @@
                 <li class="nav-item">
                     <a class="nav-link" data-toggle="pill" href="#dz4" role="tab" aria-controls="pills-contact" aria-selected="false">ДЗ Урок №4</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="pill" href="#dz5" role="tab" aria-controls="pills-contact" aria-selected="false">ДЗ Урок №5</a>
+                </li>
             </ul>
             <div class="container">
                 <div class="row">
@@ -320,6 +323,80 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="tab-pane fade" id="dz5" role="tabpanel" aria-labelledby="pills-contact-tab">
+                            <h1>ДЗ Урок №5</h1>
+                            <br><br>
+                            <div class="container">
+                                <div class="row">
+                                    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" data-toggle="pill" href="#dz5z1" role="tab" aria-controls="pills-home" aria-selected="true">Задание №1</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" data-toggle="pill" href="#dz5z2" role="tab" aria-controls="pills-home" aria-selected="true">Задание №2</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" data-toggle="pill" href="#dz5z3" role="tab" aria-controls="pills-home" aria-selected="true">Задание №3</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" data-toggle="pill" href="#dz5z4" role="tab" aria-controls="pills-home" aria-selected="true">Задание №4</a>
+                                        </li>
+                                    </ul>
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="tab-content" id="pills-tabContent">
+                                                <div class="tab-pane fade show active" id="dz5z1" role="tabpanel" aria-labelledby="pills-home-tab">
+                                                    <br><br>
+                                                    Есть кнопка button рядом с ней есть текст (Hello) необходимо при нажатии на кнопку поменять текст кнопки на (Привет)
+                                                    <br>
+                                                    <hr>
+                                                    <button id="helloButton" onclick="changeHello ()">Изменить приветствие</button>
+                                                    <span id="helloText">Hello</span>
+                                                </div>
+                                                <div class="tab-pane fade show" id="dz5z2" role="tabpanel" aria-labelledby="pills-home-tab">
+                                                    <br><br>
+                                                    Есть кнопка button рядом с ней есть тэг b (Hello) необходимо при нажатии на кнопку поменять тэг на h3
+                                                    <br>
+                                                    <hr>
+                                                    <button id="changeTag" onclick="changeTag ()">Выполнить</button> <b>Hello</b>
+                                                </div>
+                                                <div class="tab-pane fade show" id="dz5z3" role="tabpanel" aria-labelledby="pills-home-tab">
+                                                    <br><br>
+                                                    Дан код
+                                                    <code>
+                                                        <h2>Заголовок.</h2>
+                                                        <ul>
+                                                            <li>list</li>
+                                                            <li>list</li>
+                                                            <li>list</li>
+                                                            <li>list</li>
+                                                        </ul>
+                                                    </code>
+                                                    Поменяйте содержимое списка на текс list их порядковый номер в коде.
+                                                    <br>
+                                                    <hr>
+                                                    <button onclick="changeList()">Изменить список</button>
+                                                </div>
+                                                <div class="tab-pane fade show" id="dz5z4" role="tabpanel" aria-labelledby="pills-home-tab">
+                                                    <br><br>
+                                                    Есть 2 инпута и знак вопроса между ними дальше равенство и поле результата, в итоге должно получиться
+                                                    <input type="text"> <span>?</span> <input type="text"> = <span>результат</span><br>
+                                                    <button>+</button> // при нажатии необходимо сложить
+                                                    <button>-</button> // при нажатии необходимо вычесть
+                                                    <button>*</button> // при нажатии необходимо умножить
+                                                    <button>/</button> // при нажатии необходимо делить
+                                                    <br>
+                                                    <hr>
+                                                    <code>
+
+                                                    </code>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -332,6 +409,7 @@
     <script src="js/game.js"></script>
     <script src="js/leader.js"></script>
     <script src="js/questions.js"></script>
+    <script src="js/5_urok.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
