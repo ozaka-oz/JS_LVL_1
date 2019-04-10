@@ -1,12 +1,12 @@
 // задание №1
-function changeHello () {
+function changeHello() {
     let button = document.getElementById("helloButton");
     let text = document.getElementById("helloText");
     text.innerHTML = "Привет";
     button.onclick = changePrivet;
 }
 
-function changePrivet () {
+function changePrivet() {
     let button = document.getElementById("helloButton");
     let text = document.getElementById("helloText");
     text.innerHTML = "Hello";
@@ -16,7 +16,7 @@ function changePrivet () {
 // задание №2
 
 function changeTag() {
-    let textTag = document.querySelector ("#dz5z2 > b");
+    let textTag = document.querySelector("#dz5z2 > b");
     textTag.parentNode.removeChild(textTag);
     let createTitle = document.createElement("h3");
     createTitle.innerHTML = "Hello";
@@ -27,7 +27,7 @@ function changeTag() {
 // задание №3 - не понимаю почему выдает ошибку в консоли
 
 function changeList() {
-    let listItem = document.querySelectorAll ("#dz5z3 li");
+    let listItem = document.querySelectorAll("#dz5z3 li");
     let num = 0;
     for (i = 0; i <= listItem.length; i++) {
         num++;
@@ -38,13 +38,13 @@ function changeList() {
 
 // задание №4
 
-let allInput = document.querySelectorAll ("div#calculator input");
+let allInput = document.querySelectorAll("div#calculator input");
 let input1 = allInput[0];
 let input2 = allInput[1];
-let resultTag = document.querySelector ("#resultCalc");
+let resultTag = document.querySelector("#resultCalc");
 
 function sum() {
-var result = Number(input1.value) + Number(input2.value);
+    var result = Number(input1.value) + Number(input2.value);
     resultTag.innerHTML = result;
 }
 
@@ -63,10 +63,10 @@ function mul() {
     resultTag.innerHTML = result;
 }
 
-// задание №4
-function insertLi () {
-let listChange = document.querySelector ("li#list");
-let li = document.createElement("li");
-li.innerHTML = "Первый элемент списка";
-listChange.parentNode.insertBefore(li, listChange)
+// задание №5
+function insertLi() {
+    let listChange = document.querySelector("li#list");
+    let li = document.createElement("li");
+    li.innerHTML = "Первый элемент списка";
+    listChange.parentNode.insertBefore(li, listChange)
 }
