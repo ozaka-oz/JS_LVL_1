@@ -34,3 +34,6 @@ function changeList() {
         listItem[i].innerHTML = num + " List";
     }
 }
+
+
+// задание №4
