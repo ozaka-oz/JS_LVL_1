@@ -393,11 +393,14 @@
                                                     <button>/</button> // при нажатии необходимо делить
                                                     <br>
                                                     <hr>
+                                                    <button onclick="calcInput ()">Изменить список</button>
+                                                    <div id="calculator">
                                                    <input type="text"> <span>?</span> <input type="text"> = <span id="resultCalc"></span><br>
-                                                    <button>+</button> Сложить <br>
-                                                    <button>-</button> Отнять<br>
-                                                    <button>*</button> Умножить<br>
-                                                    <button>/</button> Делить<br>
+                                                    <button onclick="sum()">+</button> Сложить <br>
+                                                    <button onclick="sub()">-</button> Отнять<br>
+                                                    <button onclick="mul()">*</button> Умножить<br>
+                                                    <button onclick="div()">/</button> Делить<br>
+                                                </div>
                                                     <br>
                                                 </div>
                                                 <div class="tab-pane fade show" id="dz5z5" role="tabpanel" aria-labelledby="pills-home-tab">
@@ -405,9 +408,10 @@
                                                     Дан элемент ul, а в нем li #list. Вставьте перед элементом #list новую li с текстом 'Первый элемент списка'
                                                     <br>
                                                     <hr>
-                                                    <code>
-
-                                                    </code>
+                                                    <button onclick="insertLi ()">Вставить li</button>
+                                                    <ul>
+                                                        <li id="list">#list</li>
+                                                    </ul>
                                                 </div>
                                                 <div class="tab-pane fade show" id="dz5z6" role="tabpanel" aria-labelledby="pills-home-tab">
                                                     <br><br>

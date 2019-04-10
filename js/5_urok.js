@@ -37,3 +37,36 @@ function changeList() {
 
 
 // задание №4
+
+let allInput = document.querySelectorAll ("div#calculator input");
+let input1 = allInput[0];
+let input2 = allInput[1];
+let resultTag = document.querySelector ("#resultCalc");
+
+function sum() {
+var result = Number(input1.value) + Number(input2.value);
+    resultTag.innerHTML = result;
+}
+
+function sub() {
+    var result = Number(input1.value) - Number(input2.value);
+    resultTag.innerHTML = result;
+}
+
+function div() {
+    var result = Number(input1.value) / Number(input2.value);
+    resultTag.innerHTML = result;;
+}
+
+function mul() {
+    var result = Number(input1.value) * Number(input2.value);
+    resultTag.innerHTML = result;
+}
+
+// задание №4
+function insertLi () {
+let listChange = document.querySelector ("li#list");
+let li = document.createElement("li");
+li.innerHTML = "Первый элемент списка";
+listChange.parentNode.insertBefore(li, listChange)
+}
