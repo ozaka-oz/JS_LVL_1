@@ -17,10 +17,10 @@ function changePrivet() {
 
 function changeTag() {
     let textTag = document.querySelector("#dz5z2 > b");
-    textTag.parentNode.removeChild(textTag);
     let createTitle = document.createElement("h3");
     createTitle.innerHTML = "Hello";
-    document.querySelector("#dz5z2").appendChild(createTitle);
+    textTag.parentNode.replaceChild(createTitle, textTag)
+
 }
 
 
@@ -68,5 +68,6 @@ function insertLi() {
     let listChange = document.querySelector("li#list");
     let li = document.createElement("li");
     li.innerHTML = "Первый элемент списка";
-    listChange.parentNode.insertBefore(li, listChange)
+    // listChange.parentNode.insertBefore(li, listChange);
+    listChange.insertAdjacentHTML("afterbegin", "<li>Первый элемент списка</li>")
 }
