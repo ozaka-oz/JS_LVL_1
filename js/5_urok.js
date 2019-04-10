@@ -29,10 +29,9 @@ function changeTag() {
 
 function changeList() {
     let listItem = document.querySelectorAll ("#dz5z3 li");
-    console.log(listItem[0]);
     let num = 0;
     for (i = 0; i <= listItem.length; i++) {
         num++;
-        listItem[i].innerText = num + " List";
+        listItem[i].innerHTML = num + " List";
     }
 }
