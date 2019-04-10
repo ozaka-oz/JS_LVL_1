@@ -24,8 +24,7 @@ function changeTag() {
 }
 
 
-// задание №2 - не понимаю почему выдает ошибку в консоли
-
+// задание №3 - не понимаю почему выдает ошибку в консоли
 
 function changeList() {
     let listItem = document.querySelectorAll ("#dz5z3 li");
