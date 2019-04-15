@@ -26,7 +26,6 @@ let app = {
         }
         return `<div class="board">${board}</div>`;
     },
-
     generateRow(startWithColor, rowNum) {
         let currentColorClass = startWithColor;
         let row = "";
