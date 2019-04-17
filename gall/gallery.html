@@ -19,12 +19,16 @@
 			display: block;
 		}
 
-		.img{
-			height: 100%;
-			background-image: url('img/background-3.JPG');
+		.img img{
+			/* background-image: url('img/background-3.JPG');
 			background-repeat: no-repeat;
 			background-size: contain;
-			background-position: center center;
+			background-position: center center; */
+			height: auto;
+			width: 90%;
+			margin: 0px auto;
+			display: block;
+			max-height: 800px;
 		}
 		
 		.albumWrapper{
@@ -120,7 +124,7 @@
 <body>
 	<div class="wrap">
 		<div class="img">
-			
+			<img src="img/background-3.JPG">
 		</div>
 		<div class="albumWrapper">
 			<div class="album">
@@ -140,6 +144,7 @@
 		var cells = 10;
 		var galleryItem = document.querySelector('.galleryItem').content;
 		var mainImage = document.querySelector('.img');
+		var number = 1;
 
 		var renderItems = function () {
 			let newItem;
@@ -147,8 +152,8 @@
 
 			for (let i = 0; i <= cells; i++) {
 				newItem = galleryItem.cloneNode(true);
-				newItem.querySelector('.imgThumb').classList.add('gThumb');
-				newItem.querySelector('.imgThumb').classList.add('thumb' + i);
+				// newItem.querySelector('.imgThumb').classList.add('gThumb');
+				// newItem.querySelector('.imgThumb').classList.add('thumb' + i);
 				// newItem.querySelector('.imgThumb').style.backgroundImage = "url('img/background-"+ (i + 1) +".JPG')";
 				newItem.querySelector('.imgThumb').innerHTML = "<img src='img/background-"+ (i + 1) +".JPG' class='prevImg'>"
 				roulette.appendChild(newItem);
@@ -161,24 +166,53 @@
 			}
 			album.appendChild(roulette);
 		};
-
 		renderItems();
-
 		var galleryApp = function () {
 			// console.log (event.target.classList.contains('prevImg'))
 			if (event.target.classList.contains('prevImg') === true) {
 				// mainImage.style.backgroundImage = event.target.style.backgroundImage;
-				mainImage.style.backgroundImage = `url(${event.srcElement.getAttribute("src")})`;
+				mainImage.removeChild;
+				mainImage.innerHTML = `<img src='${event.srcElement.getAttribute("src")}'>`;
 			}
 			
 			if (event.target.classList.contains('right') === true) {
-				alert(1);
+				
+				// Получаю нод лист из всех фоток в альбоме. Так же получаю значение атрибута у текущей выбранной катринки.
+				let collectImg = album.querySelectorAll(".album img");
+				let curImg = document.querySelector(".img img").src;
+
+				// Создаю пустой массив для src фоток
+				var arrImg = [];
+
+				// Переменная в которую запишется 
+
+				// Цикл будет наполнять массив arrImg значениями аттрибутов src из нод листа collectImg
+				for (let k = 0; k < collectImg.length; k++) {
+					let srcItem = collectImg[k].src;
+					arrImg.push(srcItem);
+				}
+
+				// console.log (collectImg[0].src);
+
+				function find(array, value) {
+					for (var i = 0; i < array.length; i++) {
+					if (array[i] == value) return i;
+					}
+				}
+				find(arrImg, curImg);
+				console.log (i);
+				
+
+				// Рабочее решение
+				// if (number > cells) {
+				// 	number = 1;
+				// }
+				// mainImage.innerHTML = `<img src='img/background-${number++}.JPG' class='prevImg'>`;
 			}
 			if (event.target.classList.contains('left') === true) {
 				album.style.margin
 			}
 		};
-
 		album.addEventListener('click', galleryApp);
 	</script>
 </body>
